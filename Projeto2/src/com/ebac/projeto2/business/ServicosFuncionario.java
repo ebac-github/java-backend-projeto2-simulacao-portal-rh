@@ -1,6 +1,6 @@
 package com.ebac.projeto2.business;
 
-import com.ebac.projeto2.TIPO_FUNCIONARIO;
+import com.ebac.projeto2.enums.TipoFuncionario;
 import com.ebac.projeto2.excecoes.TipoFuncionarioInvalido;
 import com.ebac.projeto2.mensagens.Erros;
 import com.ebac.projeto2.mensagens.InteracaoUsuario;
@@ -25,17 +25,17 @@ public class ServicosFuncionario {
             System.out.println(InteracaoUsuario.DIGITAR_TIPO_FUNCIONARIO);
             int tipoFuncionarioCodigo = ManipuladorEntradas.sc.nextInt();
             ManipuladorEntradas.sc.nextLine();
-            TIPO_FUNCIONARIO tipoFuncionario = TIPO_FUNCIONARIO.fromTipoFuncionario(tipoFuncionarioCodigo);
+            TipoFuncionario tipoFuncionario = TipoFuncionario.fromTipoFuncionario(tipoFuncionarioCodigo);
 
-            if (tipoFuncionario.equals(TIPO_FUNCIONARIO.GERENTE))
+            if (tipoFuncionario.equals(TipoFuncionario.GERENTE))
                 todosFuncionarios.add(new Gerente(nome));
-            else if (tipoFuncionario.equals(TIPO_FUNCIONARIO.COORDENADOR))
+            else if (tipoFuncionario.equals(TipoFuncionario.COORDENADOR))
                 todosFuncionarios.add(new Coordenador(nome));
-            else if (tipoFuncionario.equals(TIPO_FUNCIONARIO.ANALISTA))
+            else if (tipoFuncionario.equals(TipoFuncionario.ANALISTA))
                 todosFuncionarios.add(new Analista(nome));
-            else if (tipoFuncionario.equals(TIPO_FUNCIONARIO.ASSISTENTE))
+            else if (tipoFuncionario.equals(TipoFuncionario.ASSISTENTE))
                 todosFuncionarios.add(new Assistente(nome));
-            else if (tipoFuncionario.equals(TIPO_FUNCIONARIO.ESTAGIARIO))
+            else if (tipoFuncionario.equals(TipoFuncionario.ESTAGIARIO))
                 todosFuncionarios.add(new Estagiario(nome));
 
         } catch (TipoFuncionarioInvalido e) {

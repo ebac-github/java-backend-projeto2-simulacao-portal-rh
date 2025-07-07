@@ -1,9 +1,6 @@
-import com.ebac.projeto2.TIPO_FUNCIONARIO;
 import com.ebac.projeto2.business.ManipuladorEntradas;
 import com.ebac.projeto2.business.ServicosFuncionario;
 import com.ebac.projeto2.mensagens.InteracaoUsuario;
-
-import java.util.Scanner;
 
 public class Projeto2 {
 

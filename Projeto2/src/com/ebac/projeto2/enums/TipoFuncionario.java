@@ -1,15 +1,15 @@
-package com.ebac.projeto2;
+package com.ebac.projeto2.enums;
 
 import com.ebac.projeto2.excecoes.TipoFuncionarioInvalido;
 import com.ebac.projeto2.mensagens.Erros;
 
-public enum TIPO_FUNCIONARIO {
+public enum TipoFuncionario {
 
     GERENTE(1), COORDENADOR(2), ANALISTA(3), ASSISTENTE(4), ESTAGIARIO(5);
 
     private int tipoFuncionario;
 
-    TIPO_FUNCIONARIO(int tipoFuncionario) {
+    TipoFuncionario(int tipoFuncionario) {
         this.tipoFuncionario = tipoFuncionario;
     }
 
@@ -22,8 +22,8 @@ public enum TIPO_FUNCIONARIO {
      * @param tipoFuncionario
      * @return
      */
-    public static TIPO_FUNCIONARIO fromTipoFuncionario(int tipoFuncionario) {
-        for (TIPO_FUNCIONARIO dia : values()) {
+    public static TipoFuncionario fromTipoFuncionario(int tipoFuncionario) {
+        for (TipoFuncionario dia : values()) {
             if (dia.getTipoFuncionario() == (tipoFuncionario)) {
                 return dia;
             }

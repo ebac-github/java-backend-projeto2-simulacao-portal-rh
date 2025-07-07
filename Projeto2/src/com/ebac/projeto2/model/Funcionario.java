@@ -1,6 +1,6 @@
 package com.ebac.projeto2.model;
 
-import com.ebac.projeto2.TIPO_FUNCIONARIO;
+import com.ebac.projeto2.enums.TipoFuncionario;
 import com.ebac.projeto2.business.ServicosFuncionario;
 
 /**
@@ -28,6 +28,6 @@ public abstract class Funcionario {
 
     @Override
     public String toString() {
-        return String.format("Nome: %s | id: %d | Tipo: %s", this.nome, this.idFuncionario, TIPO_FUNCIONARIO.fromTipoFuncionario(getTipoFuncionario()).name());
+        return String.format("Nome: %s | id: %d | Tipo: %s", this.nome, this.idFuncionario, TipoFuncionario.fromTipoFuncionario(getTipoFuncionario()).name());
     }
 }
